@@ -30,7 +30,7 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_BOARD_PLATFORM := poplar
 TARGET_BOOTLOADER_BOARD_NAME := poplar 
 
-BOARD_KERNEL_CMDLINE := androidboot.hardware=poplar androidboot.selinux=permissive mmz=ddr,0,0,60M firmware_class.path=/system/etc/firmware
+BOARD_KERNEL_CMDLINE := androidboot.hardware=poplar androidboot.selinux=permissive mmz=ddr,0,0,60M firmware_class.path=/vendor/firmware
 
 
 #sepolicy
@@ -39,5 +39,12 @@ BOARD_SEPOLICY_DIRS := device/hisilicon/poplar/sepolicy
 # HAL's build config
 # build config of feature graphics
 TARGET_USES_HWC2 := true
-# build config of feature bluetooth
-BOARD_HAVE_BLUETOOTH_BCM := true
+
+# wpa_supplicant and hostapd build configuration
+# wpa_supplicant is used for WiFi STA, hostapd is used for WiFi SoftAP
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mtk
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_mtk
+BOARD_WLAN_DEVICE := MediaTek

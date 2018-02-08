@@ -102,8 +102,8 @@ PRODUCT_COPY_FILES += \
 
 
 # start HAL bluetooth >>>>>>>>
-
-
+include $(LOCAL_PATH)/feature_bluetooth.mk
+include $(LOCAL_PATH)/feature_wifi.mk
 
 
 

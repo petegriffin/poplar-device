@@ -1,4 +1,6 @@
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
+    -Dnl80211 -ip2p0 -c/data/misc/wifi/p2p_supplicant.conf \
+    -e/data/misc/wifi/entropy.bin -puse_p2p_group_interface=0 -N \
     -Dnl80211 -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf \
     -O/data/misc/wifi/sockets -g@android:wpa_wlan0
     class main

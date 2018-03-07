@@ -120,9 +120,8 @@ $(call inherit-product, vendor/mediatek/poplar/bt-hal-blob.mk)
 # start HAL wifi >>>>>>>>
 # hardware features
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
-#  TODO:enable p2p/wifi-direct
-#    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \

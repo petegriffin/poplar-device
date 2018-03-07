@@ -8,9 +8,8 @@ PRODUCT_COPY_FILES += \
 
 # hardware features
 PRODUCT_COPY_FILES += \
-	 frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
-#  TODO:enable p2p/wifi-direct
-#    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+	frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+	frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
 # wifi hal implementation see device/wifi
 # include firmware

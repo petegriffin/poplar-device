@@ -17,8 +17,13 @@ on fs
 
 on post-fs-data
     # add your action here
+    mkdir /data/misc 01771 system misc
+    mkdir /data/misc 0770 wifi
+    copy /vendor/etc/wifi/wpa_supplicant.conf /data/misc/wifi/wpa_supplicant.conf
+    chown wifi wifi /data/misc/wifi/wpa_supplicant.conf
 
 on boot
+    setprop ro.boot.btmacaddr 11:22:33:44:55:66
     setprop persist.adb.tcp.port 5555
     chmod 777 /dev/ttyAMA2
     chmod 777 /sys/class/rfkill/rfkill0/state

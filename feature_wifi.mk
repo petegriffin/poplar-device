@@ -4,7 +4,7 @@
 
 # config files
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/vendor/etc/wifi/wpa_supplicant.conf
+	$(LOCAL_PATH)/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf
 
 # hardware features
 PRODUCT_COPY_FILES += \
@@ -26,8 +26,8 @@ PRODUCT_PACKAGES += \
 # copy the wifi.rc file needed by the wpa_supplicant
 # could have used LOCAL_INIT_RC but this approach seems easier
 PRODUCT_COPY_FILES += \
-		$(LOCAL_PATH)/wifi/wpa_supplicant.rc:system/etc/init/wpa_supplicant.rc \
-		$(LOCAL_PATH)/../poplar-kernel/modules/wlan_mt7668_usb.ko:system/vendor/lib/modules/wlan_mt7668_usb.ko
+		$(LOCAL_PATH)/wifi/wpa_supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wpa_supplicant.rc \
+		$(LOCAL_PATH)/../poplar-kernel/modules/wlan_mt7668_usb.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wlan_mt7668_usb.ko
 
 # wifi firmware: - copy vendor binary blob
 $(call inherit-product, vendor/mediatek/poplar/wifi-firmware.mk)

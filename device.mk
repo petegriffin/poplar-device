@@ -109,7 +109,7 @@ PRODUCT_COPY_FILES += \
 
 # manifest.xml
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+    $(LOCAL_PATH)/manifest.xml:$(TARGET_COPY_OUT_VENDOR)/manifest.xml
 
 
 # vendor raw instructions - does it has a better place to go?
